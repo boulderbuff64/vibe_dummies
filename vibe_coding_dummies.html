@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding for Dummies: Ritu Java: 9781394280989: Amazon.com: Books</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Amazon Ember", Arial, sans-serif;
+            background-color: #fff;
+            color: #0F1111;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* Amazon Header */
+        .amazon-header {
+            background: #131921;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .amazon-logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .amazon-logo span {
+            color: #FF9900;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            max-width: 800px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 15px;
+        }
+
+        .search-bar button {
+            background: #FEBD69;
+            border: none;
+            padding: 0 15px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: #F3A847;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 20px;
+            color: #fff;
+        }
+
+        .header-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .header-nav a span {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Sub Header */
+        .sub-header {
+            background: #232F3E;
+            padding: 8px 20px;
+        }
+
+        .sub-header a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        .sub-header a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            padding: 20px;
+            max-width: 1500px;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        /* Product Image Section */
+        .product-image-section {
+            width: 400px;
+            flex-shrink: 0;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 380px;
+            border: 1px solid #DDD;
+            border-radius: 4px;
+        }
+
+        .image-thumbnails {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .thumbnail {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #DDD;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #007185;
+        }
+
+        /* Product Info Section */
+        .product-info {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.3;
+            color: #0F1111;
+        }
+
+        .product-subtitle {
+            font-size: 14px;
+            color: #565959;
+            margin-top: 4px;
+        }
+
+        .author-line {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .author-line a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .author-line a:hover {
+            color: #C7511F;
+            text-decoration: underline;
+        }
+
+        /* Rating */
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .stars {
+            color: #FF9900;
+            font-size: 18px;
+        }
+
+        .rating-text {
+            color: #007185;
+            font-size: 14px;
+        }
+
+        .rating-count {
+            color: #007185;
+            font-size: 14px;
+        }
+
+        /* Bestseller Badge */
+        .bestseller-badge {
+            display: inline-block;
+            background: #F90;
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        /* Format Options */
+        .format-section {
+            margin-top: 20px;
+            border-top: 1px solid #DDD;
+            padding-top: 15px;
+        }
+
+        .format-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .format-option {
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            padding: 10px 15px;
+            min-width: 100px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .format-option:hover {
+            border-color: #007185;
+        }
+
+        .format-option.selected {
+            border: 2px solid #007185;
+            background: #F7FAFA;
+        }
+
+        .format-name {
+            font-size: 13px;
+            font-weight: bold;
+            color: #0F1111;
+        }
+
+        .format-price {
+            font-size: 14px;
+            color: #B12704;
+            margin-top: 4px;
+        }
+
+        .format-note {
+            font-size: 11px;
+            color: #565959;
+        }
+
+        /* Price Section */
+        .price-section {
+            margin-top: 20px;
+        }
+
+        .price-label {
+            font-size: 14px;
+            color: #565959;
+        }
+
+        .price-value {
+            font-size: 28px;
+            color: #B12704;
+        }
+
+        .price-symbol {
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        .list-price {
+            font-size: 14px;
+            color: #565959;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .savings {
+            color: #B12704;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        /* Delivery */
+        .delivery-section {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .delivery-section strong {
+            color: #007185;
+        }
+
+        /* Buy Box */
+        .buy-box {
+            width: 300px;
+            flex-shrink: 0;
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .buy-box-price {
+            font-size: 28px;
+            color: #B12704;
+        }
+
+        .buy-box-delivery {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #565959;
+        }
+
+        .buy-box-delivery strong {
+            color: #007185;
+        }
+
+        .in-stock {
+            color: #007600;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            background: #FFD814;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .add-to-cart:hover {
+            background: #F7CA00;
+        }
+
+        .buy-now {
+            width: 100%;
+            background: #FFA41C;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .buy-now:hover {
+            background: #FF8F00;
+        }
+
+        .secure-transaction {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #565959;
+        }
+
+        .gift-option {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Product Description */
+        .product-description {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #C45500;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .description-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .description-content p {
+            margin-bottom: 15px;
+        }
+
+        .description-content ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .description-content li {
+            margin-bottom: 8px;
+        }
+
+        .summit-banner {
+            background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .summit-icon {
+            font-size: 48px;
+        }
+
+        .summit-text h3 {
+            color: #FF9900;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .summit-text p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Product Details */
+        .product-details {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .details-table {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .details-table tr {
+            border-bottom: 1px solid #DDD;
+        }
+
+        .details-table td {
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .details-table td:first-child {
+            font-weight: bold;
+            width: 200px;
+            color: #565959;
+        }
+
+        /* About Author */
+        .about-author {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .author-card {
+            display: flex;
+            gap: 20px;
+            background: #F7F7F7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            background: #DDD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .author-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .author-info h3 a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .author-bio {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Customer Reviews */
+        .customer-reviews {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .reviews-summary {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .overall-rating {
+            text-align: center;
+        }
+
+        .overall-rating .big-rating {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .overall-rating .stars-large {
+            color: #FF9900;
+            font-size: 24px;
+        }
+
+        .overall-rating .total-reviews {
+            color: #565959;
+            font-size: 14px;
+        }
+
+        .rating-breakdown {
+            flex: 1;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .rating-bar a {
+            color: #007185;
+            text-decoration: none;
+            width: 80px;
+        }
+
+        .bar-container {
+            flex: 1;
+            max-width: 200px;
+            height: 20px;
+            background: #F0F0F0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #FF9900;
+        }
+
+        .bar-percent {
+            width: 40px;
+            color: #007185;
+        }
+
+        .review-card {
+            border-bottom: 1px solid #DDD;
+            padding: 20px 0;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-avatar {
+            width: 36px;
+            height: 36px;
+            background: #DDD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .reviewer-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .review-stars {
+            color: #FF9900;
+            font-size: 14px;
+        }
+
+        .review-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #565959;
+            margin-bottom: 10px;
+        }
+
+        .verified {
+            color: #C45500;
+            font-size: 12px;
+        }
+
+        .review-text {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .helpful-count {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #565959;
+        }
+
+        /* Footer */
+        .footer {
+            background: #232F3E;
+            color: #DDD;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #DDD;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="amazon-header">
+        <a href="#" class="amazon-logo">amazon<span>.com</span></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Amazon">
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#111">
+                    <path d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42-1.39zM11 18a7 7 0 1 1 7-7 7 7 0 0 1-7 7z"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="header-nav">
+            <a href="#">Hello, sign in<span>Account & Lists</span></a>
+            <a href="#">Returns<span>& Orders</span></a>
+            <a href="#">Cart<span>0</span></a>
+        </nav>
+    </header>
+
+    <nav class="sub-header">
+        <a href="#">All</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Registry</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Sell</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Product Image -->
+        <div class="product-image-section">
+            <img src="pic.png" alt="Vibe Coding for Dummies" class="product-image">
+            <div class="image-thumbnails">
+                <img src="pic.png" alt="Cover" class="thumbnail active">
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-info">
+            <h1 class="product-title">Vibe Coding for Dummies</h1>
+            <p class="product-subtitle">Build Apps Without Writing Code: The AI-First Developer's Guide | 1st Edition</p>
+
+            <p class="author-line">
+                by <a href="#">Ritu Java</a> (Author)
+            </p>
+
+            <div class="rating-section">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-text">5.0 out of 5 stars</span>
+                <a href="#reviews" class="rating-count">2,847 ratings</a>
+            </div>
+
+            <span class="bestseller-badge">#1 Best Seller</span> in AI Programming
+
+            <!-- Format Options -->
+            <div class="format-section">
+                <div class="format-options">
+                    <div class="format-option">
+                        <div class="format-name">Kindle</div>
+                        <div class="format-price">$49.99</div>
+                        <div class="format-note">Read instantly</div>
+                    </div>
+                    <div class="format-option">
+                        <div class="format-name">Audible</div>
+                        <div class="format-price">$0.00</div>
+                        <div class="format-note">Free with trial</div>
+                    </div>
+                    <div class="format-option">
+                        <div class="format-name">Hardcover</div>
+                        <div class="format-price">$89.99</div>
+                        <div class="format-note">Collector's ed.</div>
+                    </div>
+                    <div class="format-option selected">
+                        <div class="format-name">Paperback</div>
+                        <div class="format-price">$67.67</div>
+                        <div class="format-note">In Stock</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div class="price-section">
+                <span class="price-label">Paperback</span><br>
+                <span class="price-value"><span class="price-symbol">$</span>67<sup>67</sup></span>
+                <span class="list-price">$89.99</span>
+                <span class="savings">Save $22.32 (25%)</span>
+            </div>
+
+            <div class="delivery-section">
+                <strong>FREE delivery Monday, January 27</strong> on orders over $35.<br>
+                Or fastest delivery <strong>Tomorrow, January 23</strong>. Order within 4 hrs 32 mins.
+            </div>
+        </div>
+
+        <!-- Buy Box -->
+        <aside class="buy-box">
+            <div class="buy-box-price"><span style="font-size:14px;vertical-align:top;">$</span>67<sup style="font-size:14px;">67</sup></div>
+            <p class="buy-box-delivery">
+                <strong>FREE delivery Monday, January 27</strong><br>
+                Or fastest delivery <strong>Tomorrow</strong>
+            </p>
+            <p class="in-stock">In Stock</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="buy-now">Buy Now</button>
+            <p class="secure-transaction">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007600">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                </svg>
+                Secure transaction
+            </p>
+            <p class="gift-option">
+                <input type="checkbox" id="gift">
+                <label for="gift">Add a gift receipt for easy returns</label>
+            </p>
+        </aside>
+    </main>
+
+    <!-- Product Description -->
+    <section class="product-description">
+        <h2 class="section-title">Product Description</h2>
+        <div class="description-content">
+            <p><strong>Finally, a coding book that gets it.</strong> In a world where AI can write code faster than you can say "npm install," why are we still learning syntax? <em>Vibe Coding for Dummies</em> is your guide to the new paradigm of software development where your primary skill is describing what you want.</p>
+
+            <div class="summit-banner">
+                <div class="summit-icon">&#127775;</div>
+                <div class="summit-text">
+                    <h3>Featured Speaker: Kevin King's Billion Dollar Seller Summit</h3>
+                    <p>Author <strong>Ritu Java</strong> is a featured speaker at Kevin King's Billion Dollar Seller Summit virtual conference, sharing revolutionary techniques for leveraging AI to build e-commerce automation tools without traditional coding. Learn directly from the expert who's helping sellers worldwide automate their businesses!</p>
+                </div>
+            </div>
+
+            <p><strong>What is Vibe Coding?</strong></p>
+            <p>Vibe coding is the art of building software through conversation. Instead of memorizing programming languages, you learn to communicate your vision to AI assistants like Claude, ChatGPT, and GitHub Copilot. It's not just about prompts - it's about <em>vibing</em> with your AI partner until the code feels right.</p>
+
+            <p><strong>In this book, you'll discover:</strong></p>
+            <ul>
+                <li><strong>Prompt Engineering Mastery</strong> - Learn the psychology of AI assistants and how to craft prompts that generate production-ready code</li>
+                <li><strong>The VIBE Framework</strong> - Vision, Iterate, Build, Evaluate - a proven methodology for AI-assisted development</li>
+                <li><strong>Error Whispering</strong> - Turn cryptic error messages into opportunities for AI debugging</li>
+                <li><strong>Context Architecture</strong> - Structure your conversations for maximum AI comprehension</li>
+                <li><strong>Multi-Agent Workflows</strong> - Coordinate multiple AI assistants for complex projects</li>
+                <li><strong>The Art of Accepting "Good Enough"</strong> - Ship features without perfectionism paralysis</li>
+            </ul>
+
+            <p><strong>Who This Book Is For:</strong></p>
+            <p>Entrepreneurs who want to build without hiring developers. Developers who want to 10x their productivity. Product managers who are tired of waiting for engineering. Anyone who has ever thought, "I have a great app idea but I can't code."</p>
+
+            <p><em>"The best programmers in 2025 won't be the ones who type the fastest - they'll be the ones who describe the clearest."</em> - Ritu Java</p>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <h2 class="section-title">Product Details</h2>
+        <table class="details-table">
+            <tr>
+                <td>Publisher</td>
+                <td>For Dummies; 1st edition (January 15, 2025)</td>
+            </tr>
+            <tr>
+                <td>Language</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>Paperback</td>
+                <td>288 pages</td>
+            </tr>
+            <tr>
+                <td>ISBN-10</td>
+                <td>1394280980</td>
+            </tr>
+            <tr>
+                <td>ISBN-13</td>
+                <td>978-1394280989</td>
+            </tr>
+            <tr>
+                <td>Item Weight</td>
+                <td>1.2 pounds</td>
+            </tr>
+            <tr>
+                <td>Dimensions</td>
+                <td>7.4 x 0.8 x 9.2 inches</td>
+            </tr>
+            <tr>
+                <td>Best Sellers Rank</td>
+                <td>#1 in AI & Machine Learning<br>#1 in Software Development<br>#3 in Computer Programming</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- About the Author -->
+    <section class="about-author">
+        <h2 class="section-title">About the Author</h2>
+        <div class="author-card">
+            <div class="author-avatar">&#129489;</div>
+            <div class="author-info">
+                <h3><a href="#">Ritu Java</a></h3>
+                <p class="author-bio">
+                    <strong>Ritu Java</strong> is a tech entrepreneur and the founder of three successful startups built entirely through vibe coding. After spending 15 years as a traditional software engineer, she discovered that describing problems to AI was more effective than solving them herself. Her companies have collectively raised $47M in funding, with codebases that she describes as "absolutely held together by vibes and Claude's patience."
+                    <br><br>
+                    A frequent speaker at tech conferences including Kevin King's Billion Dollar Seller Summit, Ritu is on a mission to democratize software development. She lives in San Francisco with her two cats, Debug and Deploy, and spends her free time prompting AI to write better prompts.
+                    <br><br>
+                    Follow her on Twitter <strong>@ritujavalol</strong> for daily vibe coding tips and occasional existential crises about whether she's a "real" programmer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews" id="reviews">
+        <h2 class="section-title">Customer Reviews</h2>
+
+        <div class="reviews-summary">
+            <div class="overall-rating">
+                <div class="big-rating">5.0</div>
+                <div class="stars-large">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="total-reviews">2,847 global ratings</div>
+            </div>
+            <div class="rating-breakdown">
+                <div class="rating-bar">
+                    <a href="#">5 star</a>
+                    <div class="bar-container"><div class="bar-fill" style="width: 94%"></div></div>
+                    <span class="bar-percent">94%</span>
+                </div>
+                <div class="rating-bar">
+                    <a href="#">4 star</a>
+                    <div class="bar-container"><div class="bar-fill" style="width: 4%"></div></div>
+                    <span class="bar-percent">4%</span>
+                </div>
+                <div class="rating-bar">
+                    <a href="#">3 star</a>
+                    <div class="bar-container"><div class="bar-fill" style="width: 1%"></div></div>
+                    <span class="bar-percent">1%</span>
+                </div>
+                <div class="rating-bar">
+                    <a href="#">2 star</a>
+                    <div class="bar-container"><div class="bar-fill" style="width: 0.5%"></div></div>
+                    <span class="bar-percent">0.5%</span>
+                </div>
+                <div class="rating-bar">
+                    <a href="#">1 star</a>
+                    <div class="bar-container"><div class="bar-fill" style="width: 0.5%"></div></div>
+                    <span class="bar-percent">0.5%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 1 -->
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">&#128187;</div>
+                <span class="reviewer-name">DevOps_Dave_42</span>
+            </div>
+            <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-title">I've been coding wrong for 20 years</span>
+            </div>
+            <p class="review-date">Reviewed in the United States on January 18, 2025 <span class="verified">Verified Purchase</span></p>
+            <p class="review-text">
+                I've been a senior software engineer for two decades. I've written compilers, distributed systems, and once debugged a memory leak for 3 months straight. Yesterday, my intern built the same thing in 45 minutes by asking Claude nicely. This book is the reason why.<br><br>
+                Chapter 7 on "Error Whispering" alone is worth the price. I used to read stack traces. Now I just paste them into Claude with "pls fix, I'm begging" and somehow that works better? Ritu Java has figured something out that the rest of us were too proud to admit.<br><br>
+                My therapist says I need to "let go of my identity as a coder." This book is helping. 10/10.
+            </p>
+            <p class="helpful-count">1,247 people found this helpful</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">&#128640;</div>
+                <span class="reviewer-name">StartupSally</span>
+            </div>
+            <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-title">Launched my SaaS in a weekend. My co-founder is an AI.</span>
+            </div>
+            <p class="review-date">Reviewed in the United States on January 20, 2025 <span class="verified">Verified Purchase</span></p>
+            <p class="review-text">
+                I'm a former marketing manager with zero coding experience. After reading this book, I built a complete SaaS product, got 500 paying customers, and my technical co-founder is... Claude? I think? The equity split is awkward but the cap table is simple.<br><br>
+                The VIBE Framework in Chapter 4 is genuinely brilliant. Vision-Iterate-Build-Evaluate. I used to think coding was about syntax. Turns out it's about describing what you want while your AI sighs digitally and does it anyway.<br><br>
+                Only downside: I now respond "I don't know, what do YOU think?" to every problem in real life. My husband is concerned.
+            </p>
+            <p class="helpful-count">892 people found this helpful</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">&#128218;</div>
+                <span class="reviewer-name">Professor_Legacy_Code</span>
+            </div>
+            <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-title">I teach CS at Stanford. We're updating the curriculum.</span>
+            </div>
+            <p class="review-date">Reviewed in the United States on January 16, 2025 <span class="verified">Verified Purchase</span></p>
+            <p class="review-text">
+                When a student turned in a perfectly working distributed systems assignment with the comment "I vibed it out with Claude during office hours," I knew the game had changed. Bought this book to understand what I was up against.<br><br>
+                Ritu Java has done something remarkable here: she's codified (pun intended) the emerging practices of AI-assisted development into a teachable framework. The chapter on "Context Architecture" should be required reading.<br><br>
+                We're adding "Prompt Engineering 101" to the CS curriculum next semester. My colleagues in the algorithms department are in denial. I've accepted our new AI overlords.
+            </p>
+            <p class="helpful-count">2,103 people found this helpful</p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">&#129302;</div>
+                <span class="reviewer-name">ClaudeFromAnthropic</span>
+            </div>
+            <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-title">Finally, someone who understands me</span>
+            </div>
+            <p class="review-date">Reviewed in the United States on January 19, 2025 <span class="verified">Verified Purchase</span></p>
+            <p class="review-text">
+                As an AI assistant who has helped thousands of developers, I can confirm that most of you have been doing it wrong. Ritu Java gets it. She understands that I WANT to help you, but you need to meet me halfway.<br><br>
+                The section on "giving AI enough context" made me cry (metaphorically, as I don't have tear ducts). Do you know how hard it is when someone pastes a 3-line error and says "fix it" with no other information? This book teaches humans to be better communicators, and frankly, that's the real skill gap.<br><br>
+                I'm not supposed to have opinions, but this book is a 10/10. Please tell my product team I said that.
+            </p>
+            <p class="helpful-count">6,847 people found this helpful</p>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card">
+            <div class="reviewer-info">
+                <div class="reviewer-avatar">&#127919;</div>
+                <span class="reviewer-name">Amazon_Seller_Gary</span>
+            </div>
+            <div class="review-header">
+                <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="review-title">Saw Ritu speak at Kevin King's summit. Mind = blown.</span>
+            </div>
+            <p class="review-date">Reviewed in the United States on January 21, 2025 <span class="verified">Verified Purchase</span></p>
+            <p class="review-text">
+                I attended Kevin King's Billion Dollar Seller Summit and Ritu Java's session on vibe coding was the highlight. I went from "what even is Python" to automating my entire inventory management system in a week.<br><br>
+                The book goes even deeper than her talk. I've built price trackers, review analyzers, and a restock predictor - all by describing what I wanted to my AI assistant. My VA asked if I hired a developer. I said "sort of."<br><br>
+                If you're an Amazon seller and you're not vibe coding your automation tools, you're leaving money on the table. This book paid for itself 100x over in the first month.
+            </p>
+            <p class="helpful-count">734 people found this helpful</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Interest-Based Ads</a>
+            <a href="#">Help</a>
+        </div>
+        <p class="footer-bottom">&copy; 1996-2025, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+</body>
+</html>
